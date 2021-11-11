@@ -60,21 +60,6 @@ namespace PackerControlPanel.RPCP
             Application.Run(new Home(inventory));
 
             Settings.SaveToFile("Settings.xml", Settings);
-
-            int foo = 3;
-
-            switch (foo)
-            {
-                case 1:
-                    Console.WriteLine("1");
-                    break;
-                case 2:
-                    Console.WriteLine("2");
-                    break;
-                case 3:
-                    Console.WriteLine("3");
-                    break;
-            }
         }
     }
 }
