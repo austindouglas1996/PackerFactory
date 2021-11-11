@@ -19,9 +19,7 @@ namespace PackerControlPanel.RPCP
 {
     static class Program
     {
-        private static readonly string OfflineDescPath = "pdesc.xml";
         private static PackerUnitOfWork inventory;
-
 
         public static Settings Settings
         {
