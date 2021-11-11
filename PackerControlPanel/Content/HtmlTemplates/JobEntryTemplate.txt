@@ -1,0 +1,35 @@
+﻿    <div style=" border: solid white; border-width: 40px 0px 0px 0px"></div>
+
+	<h1>#{JOB_NAME} Information</h1>
+
+	<table>
+        <tr>
+            <th>Job Name</th>
+            <th>Part Name</th>
+            <th>Total Collected</th>
+            <th>First Seen Date</th>
+            <th>Last Seen Date</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>{JOB_NAME}</td>
+            <td>{PART_NAME}</td>
+            <td>{COLLECTED}</td>
+			<td>{FIRST_SEEN}</td>
+			<td>{LAST_SEEN}</td>
+			<td>{STATUS}</td>
+        </tr>
+		</table>
+
+		<h1>Entries:</h1>
+		            
+					<table>
+                <tr>
+                    <th>Entry ID</th>
+                    <th>Receiver name</th>
+                    <th>Contents</th>
+                    <th>Total Pc.</th>
+                    <th>Stored Location</th>
+                </tr>
+				{JOB_ENTRIES}
+            </table>

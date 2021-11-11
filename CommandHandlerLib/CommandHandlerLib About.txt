@@ -1,0 +1,95 @@
+﻿   _____ ____  __  __ __  __          _   _ _____  _    _          _   _ _____  _      ______ _____  _      _____ ____  
+  / ____/ __ \|  \/  |  \/  |   /\   | \ | |  __ \| |  | |   /\   | \ | |  __ \| |    |  ____|  __ \| |    |_   _|  _ \ 
+ | |   | |  | | \  / | \  / |  /  \  |  \| | |  | | |__| |  /  \  |  \| | |  | | |    | |__  | |__) | |      | | | |_) |
+ | |   | |  | | |\/| | |\/| | / /\ \ | . ` | |  | |  __  | / /\ \ | . ` | |  | | |    |  __| |  _  /| |      | | |  _ < 
+ | |___| |__| | |  | | |  | |/ ____ \| |\  | |__| | |  | |/ ____ \| |\  | |__| | |____| |____| | \ \| |____ _| |_| |_) |
+  \_____\____/|_|  |_|_|  |_/_/    \_\_| \_|_____/|_|  |_/_/    \_\_| \_|_____/|______|______|_|  \_\______|_____|____/ 
+                                                                                                                        
+Name: CommandHandlerLib
+Date: 24.01.2018
+Version: 1.2
+Creator: Austin Douglas
+About: The base to a application that can execute public static methods from an assembly.
+
+[UPDATES]
+1.3 [21.06.2018]
+{
+	- I'm back :D
+	- Fixed a few weirdly fatal bugs
+	- Changed the way results are returned on command execution and the way command arguments are passed.
+	- Added CommandArgs.cs, CommandResult.cs, CommandResultType.cs
+	- Moved ICommand.cs to /Commands.
+}
+
+1.2 [24.01.2018]
+{
+	- Added Enum argument support.
+	- Fixed bugs
+}
+
+1.1 [07.July.2017]
+{
+	- Added 'abstract' commands, that can now no longer need to be a static methods to be executed and instead be executed through being derived of the "Command" class only downside is cant get command arguments.
+	- Fixed bugs
+	- Made more bugs (of course)
+}
+
+[DOCUMENTATION]
+Commands are specified by type all commands must be public, static and have a return type of string. 
+commands can be added manually or by providing information on a specific class (or called a library)
+
+
+[DOCUMENTATION - ATTRIBUTES]
+-- CommandLibraryAttribute --
+An attribute for classes that helps define a new name instead of using the default name.
+
+-- CommandAttribute --
+An attribute for commands that defines the name of the command a breif description of what it does.
+
+-- IgnoreCommandAttribute --
+This method/property is not a command and should not be executed.
+
+
+[DOCUMENTATION - EXCEPTIONS]
+-- CommandNotFoundException --
+This command is thrown when a command is not found by name or in the specified library.
+
+
+[DOCUMENTATION - EXAMPLES]
+(1) [CommandLibrary("default")]
+public class DefaultCommands
+{
+	(2) [Command("SayHello", "Says hello based on name.")]
+	(3) public static string SayHello(string name)
+	{
+		return string.formart("Hi, {0}.", name);
+	}
+}
+
+[CommandLibrary("Greet")]
+public class GreetCommands
+{
+	[Command("SayHey", "Say hey to someone based on name.")]
+	public static string SayHey(string name)
+	{
+		return string.formart("Hey, {0}.", name);
+	}
+}
+
+(1) Name your default commands class "default". When a command is processed if the library is not specified 
+the library uses the default value "default" which helps out for commands like, "help", "about" or "getcommands".
+(1) See attribute 'CommandLibraryAttribute'
+(2) See attribute 'CommandAttribute'
+(3) For a command to be retrieved and actually executed it must be public, static and have a return type of string.
+
+-- HOW TO CALL A COMMAND --
+(1)[CommandLibrary].(2)[CommandName] (3)[CommandArguments]
+
+Ex.
+(1) If the command is placed in the 'default' library then the library does not need to be specified.
+(2) Name of the command.
+(3) Arguments for the command.
+
+SayHello Austin
+default.SayHello Austin
+greet.SayHey Austin

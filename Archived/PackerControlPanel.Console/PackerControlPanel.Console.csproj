@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7DF500E-206A-40B6-AFDA-19DA5443426B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PackerControlPanel.Console</RootNamespace>
+    <AssemblyName>PackerControlPanel.Console</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PackerControlPanel.Win32Console.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Settings.cs" />
+    <Compile Include="PackerConsole.cs" />
+    <Compile Include="Colours.cs" />
+    <Compile Include="Commands\Commands\AboutCommand.cs" />
+    <Compile Include="Commands\Commands\FontChange.cs" />
+    <Compile Include="Commands\Commands\ImportCommand.cs" />
+    <Compile Include="Commands\CommandUtility.cs" />
+    <Compile Include="Commands\DatabaseCommands.cs" />
+    <Compile Include="Commands\DefaultCommands.cs" />
+    <Compile Include="Commands\Commands\XmlExportCommand.cs" />
+    <Compile Include="Commands\JobCommands.cs" />
+    <Compile Include="Commands\PartCommands.cs" />
+    <Compile Include="Commands\ReceiverCommands.cs" />
+    <Compile Include="Commands\ReceiverEntryCommands.cs" />
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="Extensions\TableExtensions.cs" />
+    <Compile Include="IConsole.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Helpers\Utility.cs" />
+    <Compile Include="ConsoleTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="__old\Settings.cs" />
+    <Compile Include="Controls\ConsoleLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StackPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PackerConsoleWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommandHandlerLib\CommandHandlerLib.csproj">
+      <Project>{5990a9c3-b775-4b41-b19d-a79b6e8be7e5}</Project>
+      <Name>CommandHandlerLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PackerControlPanel.Core\PackerControlPanel.Core.csproj">
+      <Project>{9b5b8e68-b938-44b8-8b48-437c3360a7f5}</Project>
+      <Name>PackerControlPanel.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PackerControlPanel\PackerControlPanel.Data.csproj">
+      <Project>{130a09c0-e572-4973-a3cb-7a5bea321e99}</Project>
+      <Name>PackerControlPanel.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackerConsoleWin.resx">
+      <DependentUpon>PackerConsoleWin.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

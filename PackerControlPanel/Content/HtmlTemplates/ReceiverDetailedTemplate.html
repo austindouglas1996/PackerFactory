@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>{RECEIVER_NAME}</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr[name="Date"] {
+            background: #e0e0e0;
+        }
+
+        tr[name="note"] {
+            background-color: rgba(255, 251, 43,0.3);
+        }
+
+
+
+        td[name="element_Part Name"] > t[name="element_barcode"] {
+            display: none;
+        }
+
+        td[name="element_Contents"] > t[name="element_barcode"] {
+            display: none;
+        }
+
+        td[name="element_Total"] {
+            width: 15%;
+        }
+
+        td[name="element_Name"] {
+            width: 20%;
+        }
+
+        td[name="element_Order"] {
+            width: 15%;
+        }
+
+        td[name="element_Contents"]
+        {
+            width: 22%;
+        }
+
+        td[name="element_Description"] {
+            width: 30%;
+        }
+
+        t[name="element_barcode"] {
+            font-family:'Free 3 of 9';
+            font-size:32px;
+        }
+
+        b[name="element_Location"] {
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+            margin: 100px;
+        }
+
+        p[name="isPartial"] {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Receiver</h1>
+    <h1>Date: {RECEIVER_DATE}</h1>
+
+    <table>
+        <tr>
+            <th>Total Pc.</th>
+            <th>Part Name</th>
+            <th>Work Order</th>
+            <th>Contents</th>
+            <th>Stored Location</th>
+        </tr>
+        <tr>
+            {RECEIVER_ITEMS_CONTENTS}
+        </tr>
+    </table>
+
+    <footer>
+        <p align="right">Version: {RECEIVER_VERSION}</p>
+    </footer>
+</body>
+</html>

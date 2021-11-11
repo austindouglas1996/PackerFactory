@@ -1,0 +1,34 @@
+﻿    <div style=" border: solid white; border-width: 40px 0px 0px 0px"></div>
+	<table>
+        <tr>
+            <th>Part Name</th>
+            <th>Work Order</th>
+            <th>Received Location</th>
+        </tr>
+        <tr>
+            <td>{PART_NAME} <br /><t name="element_barcode">*{PART_NAME}*</t></td>
+            <td>{JOB_NAME}</td>
+            <td>{RECEIVED_LOCATION} <br /><t name="element_barcode">*{RECEIVED_LOCATION}*</t></td>
+        </tr>
+        <tr>
+            <td>
+            <table>
+                <tr>
+                    <th>Receiver name</th>
+                    <th>Contents</th>
+                    <th>Total Pc.</th>
+                </tr>
+				{RECEIVER_ENTRIES}
+            </table>
+           </td>
+        </tr>
+        <tr>
+            <th>Stored Location</th>
+            <th>Total Transfer</th>
+        </tr>
+        <tr>
+            <td>{STORED_LOCATION} <br /><t name="element_barcode">*{STORED_LOCATION}*</t></td>
+            <td>{TOTAL_COUNT}pc <br /><t name="element_barcode">*{TOTAL_COUNT}*</t></td>
+        </tr>
+		{NOTES}
+    </table>

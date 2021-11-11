@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @page {
+            size: auto; /* auto is the current printer page size */
+            margin: 0mm; /* this affects the margin in the printer settings */
+        }
+
+        body {
+            font-family: Calibri;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #BoxContainer {
+            position: relative;
+            width: 50%;
+            margin: auto;
+            border: 1px solid #000000;
+        }
+
+        .PartName {
+            font-size: 90px;
+            text-decoration: underline;
+        }
+
+        .PartOrder {
+            font-size: 70px;
+            text-decoration: dashed;
+        }
+
+        .PartContents h1 {
+            font-size: 50px;
+        }
+
+        .LabelDate {
+            font-size: 60px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Label">
+        <h1 class="PartName">{PART_NAME}</h1>
+
+        <h1>Work Order:</h1>
+        <div id="BoxContainer">
+            <h1 class="PartOrder">{WORK_ORDER}</h1>
+        </div>
+
+        <h1>Contents:</h1>
+        <div id="BoxContainer" class="PartContents">
+            {CONTENTS}
+        </div>
+    </div>
+
+    <div id="footer">
+        <h1 class="LabelDate">Date: {DATE}</h1>
+    </div>
+</body>
+</html>
