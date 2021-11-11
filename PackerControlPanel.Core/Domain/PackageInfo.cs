@@ -18,16 +18,7 @@ namespace PackerControlPanel.Core.Domain
             {
                 return new string[]
                 {
-                    "None",
-                    "8X6X4",
-                    "8X6X6",
-                    "8X8X8",
-                    "Mexico Box",
-                    "Small Bag",
-                    "Medium Bag",
-                    "Large Bag",
-                    "Green Bin",
-                    "Coloured Tote",
+                    "Removed","Removed1"
                 };
             }
         }
