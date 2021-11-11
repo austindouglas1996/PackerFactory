@@ -90,7 +90,6 @@
     <Compile Include="Drawings\Elements\LineStacker.cs" />
     <Compile Include="Drawings\Elements\VericalAlignment.cs" />
     <Compile Include="Drawings\ILabelDrawing.cs" />
-    <Compile Include="Drawings\LegacyLabelDrawing.cs" />
     <Compile Include="Helpers\Helpers.cs" />
     <Compile Include="ILabel.cs" />
     <Compile Include="LabelOrderEntryType.cs" />
