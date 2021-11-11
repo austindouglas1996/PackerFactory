@@ -1,12 +1,9 @@
-﻿using PackerControlPanel.Core.Domain;
+﻿using PackerControlPanel.Core;
+using PackerControlPanel.Core.Domain;
 using PackerControlPanel.Data;
 using PackerControlPanel.Image.Drawings;
 using System;
-using System.Collections.Generic;
 using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PackerControlPanel.Image
 {
@@ -66,7 +63,7 @@ namespace PackerControlPanel.Image
     public class LabelFactoryActionReceive : ILabelFactoryAction
     {
         private Receiver _receiver;
-        private PackerUnitOfWork _domain;
+        private IPackerUnitOfWork _domain;
 
         public LabelFactoryActionReceive(PackerUnitOfWork domain, Receiver receiver)
         {

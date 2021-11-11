@@ -15,6 +15,7 @@ using PackerControlPanel.Data;
 using PackerControlPanel.Data.Repository;
 using PackerControlPanel.Data.Common;
 using PackerControlPanel.Core.Domain;
+using PackerControlPanel.Core;
 
 namespace PackerControlPanel.Image.Presenters
 {
@@ -22,7 +23,7 @@ namespace PackerControlPanel.Image.Presenters
         where TLabelOrder : ILabelOrder
     {
         private bool Offline = false;
-        private PackerUnitOfWork Domain;
+        private IPackerUnitOfWork Domain;
         private IPartDescRepository DescDomain;
         private ILabelDrawing _Drawing;
         private ILabelFactoryBaseView<TLabelOrder> _view;

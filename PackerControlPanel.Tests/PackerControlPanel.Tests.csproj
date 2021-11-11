@@ -81,13 +81,13 @@
       <Project>{9b5b8e68-b938-44b8-8b48-437c3360a7f5}</Project>
       <Name>PackerControlPanel.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PackerControlPanel.Data\PackerControlPanel.Data.csproj">
+      <Project>{130a09c0-e572-4973-a3cb-7a5bea321e99}</Project>
+      <Name>PackerControlPanel.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PackerControlPanel.LabelMaker\PackerControlPanel.Image.csproj">
       <Project>{a56be02f-d53f-4421-bcbc-5242734c7eb4}</Project>
       <Name>PackerControlPanel.Image</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PackerControlPanel\PackerControlPanel.Data.csproj">
-      <Project>{130a09c0-e572-4973-a3cb-7a5bea321e99}</Project>
-      <Name>PackerControlPanel.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -23,6 +23,7 @@ namespace EntityRepository
 
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
+       
         void RemoveAll();
 
         void SaveChanges();

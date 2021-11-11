@@ -111,7 +111,7 @@
       <Project>{9B5B8E68-B938-44B8-8B48-437C3360A7F5}</Project>
       <Name>PackerControlPanel.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PackerControlPanel\PackerControlPanel.Data.csproj">
+    <ProjectReference Include="..\PackerControlPanel.Data\PackerControlPanel.Data.csproj">
       <Project>{130a09c0-e572-4973-a3cb-7a5bea321e99}</Project>
       <Name>PackerControlPanel.Data</Name>
     </ProjectReference>

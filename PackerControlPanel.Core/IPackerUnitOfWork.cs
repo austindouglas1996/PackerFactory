@@ -17,5 +17,6 @@ namespace PackerControlPanel.Core
         ITransferRepository Transfers { get; }
         ITransferEntryRepository TransfersEntries { get; }
         ISkidRepository Skids { get; }
+        int Complete();
     }
 }
