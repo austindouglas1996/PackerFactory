@@ -298,8 +298,8 @@
       <Project>{130a09c0-e572-4973-a3cb-7a5bea321e99}</Project>
       <Name>PackerControlPanel.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PackerControlPanel.LabelMaker\PackerControlPanel.Image.csproj">
-      <Project>{A56BE02F-D53F-4421-BCBC-5242734C7EB4}</Project>
+    <ProjectReference Include="..\PackerControlPanel.Image\PackerControlPanel.Image.csproj">
+      <Project>{a56be02f-d53f-4421-bcbc-5242734c7eb4}</Project>
       <Name>PackerControlPanel.Image</Name>
     </ProjectReference>
   </ItemGroup>

@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other", "Other", "{D5C6D0DD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackerControlPanel.RPCP", "PackerControlPanel.ReceivingLabelMaker\PackerControlPanel.RPCP.csproj", "{4905BB05-9417-4ACC-B627-2BF44AAB57B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackerControlPanel.Image", "PackerControlPanel.LabelMaker\PackerControlPanel.Image.csproj", "{A56BE02F-D53F-4421-BCBC-5242734C7EB4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackerControlPanel.Image", "PackerControlPanel.Image\PackerControlPanel.Image.csproj", "{A56BE02F-D53F-4421-BCBC-5242734C7EB4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackerControlPanel.Tests", "PackerControlPanel.Tests\PackerControlPanel.Tests.csproj", "{DFC6A71E-E4B2-4079-93AF-B046DFC90745}"
 EndProject
