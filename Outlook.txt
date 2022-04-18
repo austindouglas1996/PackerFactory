@@ -1,1 +1,0 @@
-This is a *Framework* project. Core,Date,Image should not have UI logic or creation. It should just help with the creation of stuff to make it easier when making a full fletch program.
