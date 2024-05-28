@@ -1,27 +1,31 @@
-PackerFactory is a collection of libraries and applications that started development in April 2016 and ceased abruptly in November 2021. PackerFactories' purpose was to assist in the automation of services as a receiving clerk at a factory. Each library consists of a specific objective or problem to solve.
+# PackerFactory
 
-# What is everything?
-## EntityRepository 
-Includes the most basic interfaces to define how an EntityFramework code-first approach database handler should be created and handled.
+PackerFactory is a collection of libraries and applications developed from April 2016 to November 2021. Its purpose was to automate services for receiving clerk jobs at a factory. This was my first of many jobs and helped me automate a lot of my day-to-day work. Each library targets a specific objective or problem.
 
-## PackerControlPanel.Core
-The core library contains the base model data used throughout the rest of the libraries. Includes the basic structure of objects used throughout the receiving process, such as part, job, receiver, transfer, and interfaces for handling a database interaction and interfaces for an MVP pattern on UI creation.
+## Libraries
 
-## PackerControlPanel.Data
-The data library contains the implementation logic of the database interaction by handling the context and worker for an EntityFramework code-first approach. It also implements multiple ways for creating infographics based on model data, like the extraction of a receiver, transfer documents, and infographics on parts and jobs information.
+### EntityRepository
+Defines interfaces for an EntityFramework code-first database handler.
 
-## PackerControlPanel.Image
-The image library contains the implementation of handling infographics such as box labels. Other deployments include separating user data by splitting values and creating concrete classes with receiver entries and UI handling.
+### PackerControlPanel.Core
+Provides core model data and structure for receiving process objects and UI creation.
 
-# Deployements
-## PackerControlPanel.RPCP
-RPCP or Receiving Packer Control Panel is an application that works on handling part names, job names, creating and storing receiver documents, along the late implementation of transfer documents. Said program also kept important information stored in an SQLite database; previously in an MYSQL Server. Some code changes will be required to change over to a working SQL server.
+### PackerControlPanel.Data
+Implements database interaction and creates infographics based on model data.
 
-## PackerControlPanel.v3.Importer
-An older deployed version of the application used a command-line interface. This application was used to import version 3 or lower into the newer system, which uses an MYSQL server for the storage of data. XML exporting/importing is still a selectable feature but not recommended.
+### PackerControlPanel.Image
+Handles infographics such as box labels, manages user data, and creates receiver entries.
 
-## PackerControlPanel.v3.DescMan
-An older application was used for managing part descriptions from a different source than through PackerControlPanel. This program has no use in the newer versions but is kept in case using or browsing through old versions of PCPV3
+## Applications
 
-## CommandHandlerLib
-A small library framework library was created for the plan of turning coded methods into commands. Entire classes can be broken into command groups with ease. This was used in older versions of PCPv2, which used a command-line interface.
+### PackerControlPanel.RPCP
+Manages part names, job names, receiver, and transfer documents, storing data in SQLite.
+
+### PackerControlPanel.v3.Importer
+Command-line tool for importing data from older versions using MySQL. XML exporting/importing is available but not recommended.
+
+### PackerControlPanel.v3.DescMan
+Manages part descriptions for older application versions, retained for legacy browsing.
+
+### CommandHandlerLib
+Framework for converting methods into command groups, used in older command-line versions.
